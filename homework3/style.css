@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+body{ 
+	background-image: url("/images/pidgeon-background.jpg");
+	background-color: #dddddd;
+	font-family: sans-serif;
+	} 
+p { 
+	color: black;
+	size: 18px;
+	padding-top: 15px; 
+	} 
+h1 { 
+	 display: block;
+	 font-size: 2em;
+	 line-height: 1.5;
+	 color: #c12258;
+	}
+h3{ 
+	color: white; 
+	}
+
+a{
+	color: #c12258;
+	size: 18px;
+	text-decoration: underline;
+}
+a:focus {
+  outline: 1px solid red;
+}
+
+table {
+  border: 2px solid black;
+  background: transparent;
+  border-collapse:separate;
+  border-radius:10px;
+  -moz-border-radius:10px;
+}
+tr:hover {
+	background-color:#fab9cf;
+	}
+
+th{
+	background: #7e0830;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	min-width: 150px;
+}
+
+td{
+	text-align: center;
+	padding: 15px;
+	border-right: 2px;
+}
+
+tbody tr:nth-child(even){
+  background-color: #dddddd;
+}
+tbody tr:nth-child(odd){
+  background: white;
+}
+
+footer{
+	
+  	min-height: 60px;
+ 	position: fixed;
+   	left: 0;
+   	bottom: 0;
+   	width: 100%;
+   	background-color: red;
+   	color: white;
+   	text-align: center;
+}
+
