@@ -1,0 +1,350 @@
+/*grid columns: 1/-1
+grid-cloumn: 1/ span 3
+*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.nav ul{
+  list-style-type: none;
+}
+
+.nav li{
+  /*Your code here */
+  display: inline-block;
+}
+
+.nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav a:active {
+  text-decoration: underline;
+}
+
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;/*Your code here - position relative to the parent */;
+  top: -40px;   
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+}
+
+.skip a:focus, .skip a:active{
+  margin: 0 auto;
+  top: 0;
+  padding: 10px 0px;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+
+
+a:focus {
+  border: 2px solid black;  
+}
+
+a:hover {
+  border: 2px solid black;  
+}
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / 8;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.container{
+  /*Your code here  */
+  /*Provided*/
+  display: grid;
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  grid-template-columns: 100px 500px 100px;
+  grid-row-gap: 15px;
+  position: relative;
+}
+
+.nav{
+   /*Your code here */
+  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0 20px 0; 
+  text-align: left; 
+  text-align: left;
+  top: 50%;
+  grid-row: 1 / 2;
+  grid-column: 1/ -1;   
+}
+
+
+.nav li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    text-decoration: none;
+  }
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url(../images/header.jpg);      /* Your code here - Link to header.jpg in the images folder */
+  /* Create the parallax scrolling effect */
+
+  color: white;
+  grid-column: 1/ -1;
+  grid-row: 2/ 3;
+  /*Your code here - cover the entire row*/
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header p{
+  grid-column: 2/ 3;
+  grid-row: 2/ 3;
+  margin: 100px;
+}
+
+
+.about-image{
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  background-image: url(../images/about.jpg);
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.about{
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.method-image{
+  /*Your code here */
+     grid-column: 1/ -1;
+     grid-row: 4/5;
+     background-image: url(../images/method.jpg);
+     max-height: 700px;
+    overflow: hidden;
+
+}
+
+.method{
+    /*Your code here - start in the 2nd column*/
+      grid-column: 2/3;
+      grid-row: 4/5;
+}
+
+.clients-image{
+  /*Your code here */
+     grid-column: 1/ -1;
+     grid-row: 5/6;
+     background-image: url(../images/clients.jpg);
+     max-height: 700px;
+     overflow: hidden;
+
+}
+
+.clients{
+    /*Your code here - start in the 2nd column*/
+      grid-column: 2/3;
+      grid-row: 5/6;
+}
+
+.contact-image{
+  /*Your code here */
+     grid-column: 1/ -1;
+     grid-row: 6/7;
+     background-image: url(../images/contact.jpg);
+     max-height: 700px;
+     overflow: hidden;
+}
+
+.contact{
+    /*Your code here - start in the 2nd column*/
+      grid-column: 2/3;
+      grid-row: 6/7;
+}
+
+.text-block{
+   /*Your code here */
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+  text-align: center;
+  margin: 50;
+  align-self: center;
+  justify-content: center;
+}
+
+
+
+@media only screen and (min-width: 800px) /*Your code here - Add the first media query.*/{
+
+  .container {
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px, 400px, 400px, 400px, 400px, 400px 100px;
+  }
+
+  .nav{
+    background-color: #ddd;
+
+     /*Your code here */
+    text-align: right;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .about-image{
+     /*Your code here */
+     grid-column: 2/ 4;
+     grid-row: 3/4;
+     background-image: url(../images/about.jpg);
+     max-height: 700px;
+     overflow: hidden;
+    }
+
+  .about{
+    /*Your code here */
+      grid-column: 3/5;
+      grid-row: 2/4;
+  }
+
+  .method-image{
+    /*Your code here */
+     grid-column: 3/5;
+     grid-row: 4/5;
+     background-image: url(../images/method.jpg);
+     max-height: 700px;
+     overflow: hidden;
+  }
+
+  .method{
+    /*Your code here */
+      grid-column: 2/4;
+      grid-row: 4/5;
+      
+  }
+
+  .clients-image{
+    /*Your code here */
+     grid-column: 2/ 4;
+     grid-row: 5/6;
+     background-image: url(../images/clients.jpg);
+     max-height: 700px;
+     overflow: hidden;
+  }
+
+  .clients{
+    /*Your code here */
+      grid-column: 3/5;
+      grid-row: 5/6;
+      
+  }
+
+  .contact-image{
+    /*Your code here */
+     grid-column: 3/ 5;
+     grid-row: 6/7;
+     background-image: url(../images/contact.jpg);
+     max-height: 700px;
+     overflow: hidden;
+  }
+
+  .contact{
+    /*Your code here */
+      grid-column: 2/4;
+      grid-row: 6/7;
+      
+  }
+  .text-block{
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    padding: 30px;
+    position: absolute;
+    align-self: center;
+    justify-content: center;
+   }
+
+   .skip a{
+      background: white;
+      left: 0;
+      padding: 6px;
+      position: absolute;/*Your code here - position relative to the parent */;
+      top: -40px;   
+      -webkit-transition: top 1s ease-out;
+      transition: top 1s ease-out;
+      overflow: hidden;
+    }
+
+  .skip a:focus, .skip a:active{
+      top:0;
+      margin: 0 auto;
+      overflow: visible;
+    }
+
+}  /*End the media query*/
+
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;/* Your code here - set to default setting */
+    transition: none;/* Your code here - set to default setting */
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}

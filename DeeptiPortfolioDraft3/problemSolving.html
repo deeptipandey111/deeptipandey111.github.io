@@ -1,0 +1,111 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Check out Deepti's way of solving problem</h2>
+  <p>Click on the boxes below to know more</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    Conceptualization
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    Research
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Reiterate 
+  </div>
+  <div class="column" onclick="openTab('b4');" style="background:pink;">
+    Pick a solution
+  </div>
+  <div class="column" onclick="openTab('b5');" style="background:brown">
+    Implement 
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Conceptualization</h2>
+  <p> In this step I take the problem and take a while to think about it. I take the idea and let it marinate over a period of time
+Laying it on the map: In this step, I like to lay out the possible ideas, without leaving out the wildest thoughts and put them out physically on a map to think more about them. Sometimes sticky notes help to lay it out and help me see it so clearly.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Research</h2>
+  <p>Then I pick the top 5 “most interesting” ideas and look up what has already been done, to do a kind of a market analysis to see what has been done or explored in the past to solve this particular problem</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Reiterate and revisit</h2>
+  <p>I spend some more time thinking and revisiting these top ideas, to try and refine them better and come up with possible solutions which, when not innovative are just a better version of pre-existing solutions</p>
+</div>
+<div id="b4" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Pick a solution</h2>
+  <p>Out of the top solutions, I pick the one that seems best to me, depending on the central goal of the problem. </p>
+</div>
+<div id="b5" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Implement the solution</h2>
+  <p>In the final step, I make sure that I always have at least some prototype for the solution, so as to get a closure. It could be a hand drawn sketch full blown mobile app.</p>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
