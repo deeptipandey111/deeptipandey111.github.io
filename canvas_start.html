@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Drawing Area</title>
+<!-- You can add your style here rather than in an external style sheet. -->
+<style>
+	canvas {
+	    border:5px solid #d3d3d3;
+	    background-color: #f1f1f1;
+	    display: block;
+	}
+</style>
+</head>
+<body>
+	
+    <!-- DO NOT MODIFY THIS HTML -->
+    <canvas id = "myCanvas" width = "350" height = "500"></canvas>
+    <input type = "color" id = "picker"/>
+    <script>
+	    var canvas = document.querySelector("#myCanvas");
+		var ctx = canvas.getContext("2d");
+		var toDraw=true;
+		canvas.addEventListener('onmousemove', function(e)
+		{
+				ctx.beginPath();
+        		ctx.arc(e.x, e.y, 10, 0 , 2 * Math.PI);
+  				ctx.fillStyle = 'red';
+  				ctx.fill();
+		}
+		);
+		canvas.addEventListener('mousemove', function(e)
+		{
+			if(toDraw)
+				{
+					draw(e.x, e.y)
+				}
+			}
+			);
+		window.addEventListener('keydown', function(e){
+			switch(e.keyCode){
+				case 32:
+					console.log("space pressed");
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					break;
+				case 82:
+					ctx.fillStyle='red';
+					break;
+				case 71:
+					ctx.fillStyle='green';
+					break;
+				case 66:
+					ctx.fillStyle='blue';
+					break;
+				case 89:
+					ctx.fillStyle='yellow';
+					break;
+				case 38:
+					toDraw=false;
+					break;
+				case 40:
+					toDraw=true;
+					break;
+
+				}
+			}
+		);
+      
+		function draw(x,y){
+			ctx.beginPath();
+			ctx.arc(x,y, 10, 0, 2*Math.PI);
+			ctx.fill();
+		}
+        var pickerVar=document.querySelector("#picker");
+        pickerVar.addEventListener('change', function(){ctx.fillStyle=this.value;});
+    	document.querySelector("#myCanvas").width = 0.8*window.innerWidth;
+        document.querySelector("#myCanvas").height = 0.8*window.innerHeight;
+
+    </script>
+</body>
+</html>
