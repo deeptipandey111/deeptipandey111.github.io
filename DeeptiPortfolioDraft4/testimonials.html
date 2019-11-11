@@ -1,0 +1,156 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+var log = document.getElementById('log');
+
+document.addEventListener('keypress', logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <title>Deepti Pandey</title>
+  </head>
+  <body>
+    <body>
+<div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./problemSolving.html">Method</a></li>
+          <li><a class="current" href="./testimonials.html">Testimonial</a></li>
+          <li><a href="./accomplishments.html">Accomplishments</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header id="main">
+<div style="text-align:center">
+  <h2>Check out Deepti's way of solving problem</h2>
+  <p>Click on the boxes below to know more</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    Rahul Meena
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    Rithesh Rao
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Priya Varadarajan 
+  </div>
+  <div class="column" onclick="openTab('b4');" style="background:pink;">
+    Jiyun Sim
+  </div>
+ 
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+
+
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Rahul Meena</h2>
+  <img src="images/rahul_meena.jpeg" alt="Rahul Meena">
+  <p> Deepti’s ability to motivate, lighten up the mood, give and take constructive criticism, manage her time, find creative ways to solve a problem and her organizational skills according to me are the qualities of a great leader and I have full faith that Deepti will not only excel at your esteemed university but add a lot to its glorious heritage. </p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Rithesh Rao</h2>
+    <img src="images/rithesh_rao.jpeg" alt="Rithesh Rao">
+  <p>While developing UI and Mobile Applications is usually accelerated by the Tools & Software Development Kit’s out there, having a thorough understanding of the concepts and algorithms within these tools gives an edge to an engineer when it comes to providing a superior quality application and solve issues quicker, which Deepti seems to grasp naturally. She went through any and all the literature she could find to master the basics as well as advanced Mobile development.  </p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Priya Vararajan</h2>
+  <img src="images/priya.jpeg" alt="Priya Vararajan">
+
+  <p>A lot of the times, I personally learned a great deal from Deepti; particularly her superior organizational skills as well as productivity oriented approach to work, which lead her to find faster ways of doing her task than our legacy approach.</p>
+</div>
+<div id="b4" class="containerTab" style="display:none;background:pink">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Jiyun Sim</h2>
+  <img src="images/jiyun.jpg" alt="Jiyun Sim">
+
+  <p>I would have loved to keep a talent like her to help me in my entrepreneurial endeavors but I know her future and destiny are far greater than what I could help her with, thus I send my highest recommendation and vouch for her capabilities, intellectual independence and potential to carry on advanced studies at your prestigious institute. 
+
+ </p>
+</div>
+
+    <footer>
+      <p>Deepti Pandey <br/>
+        &copy; The portfolio </p>
+    </footer>
+    </div>
+  </body>
+</html>
