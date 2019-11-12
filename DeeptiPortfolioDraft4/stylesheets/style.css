@@ -164,7 +164,7 @@ footer{
 }
 header{
   background-attachment: fixed; /* Parallax effect */
-  background-image: url(../images/header1.jpg);      
+  background-image: url(../images/header.jpg);      
   /* Create the parallax scrolling effect */
 
   color: black;
