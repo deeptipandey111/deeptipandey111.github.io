@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  background-color: #ddd;
+  background-color: pink;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -152,7 +152,7 @@ footer{
 .nav li a {
     display: block;
     padding: 8px;
-    background-color: #dddddd;
+    background-color: pink;
     text-decoration: none;
   }
 .nav .current{
@@ -352,7 +352,7 @@ text-align: center;
   }
 
   .nav{
-    background-color: #ddd;
+    background-color: pink;
 
      /*Your code here */
     text-align: right;
