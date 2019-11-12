@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  background-color: pink;
+  background-color: white;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -118,7 +118,7 @@ a:hover {
 }
 
 footer{
-  background-color: pink;
+  background-color: white;
   color: black;
    
   padding-top: 30px;
@@ -139,7 +139,7 @@ footer{
 .nav{
    /*Your code here */
   /*Provided*/
-  background-color: pink;
+  background-color: white;
   padding: 20px 0 20px 0; 
   text-align: left; 
   text-align: left;
@@ -152,7 +152,7 @@ footer{
 .nav li a {
     display: block;
     padding: 8px;
-    background-color: pink;
+    background-color: white;
     text-decoration: none;
   }
 .nav .current{
@@ -352,7 +352,7 @@ text-align: center;
   }
 
   .nav{
-    background-color: pink;
+    background-color: white;
 
      /*Your code here */
     text-align: right;
