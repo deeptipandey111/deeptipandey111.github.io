@@ -77,6 +77,10 @@ input[type=submit]:hover {
 .nav a:active {
   text-decoration: underline;
 }
+.flip-card-front img {
+    color:black;
+}
+
 .nav .current{
   background-color: red;
 }
