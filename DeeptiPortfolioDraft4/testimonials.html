@@ -1,12 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <title>Deepti Pandey</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -44,40 +49,16 @@ body {
 }
 
 </style>
+
+
 </head>
 
 
-
-<script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
-var log = document.getElementById('log');
-
-document.addEventListener('keypress', logKey);
-
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
-}
-</script>
-
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stylesheets/html5reset.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <title>Deepti Pandey</title>
-  </head>
   <body>
-    <body>
+    
+
+
+
 <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
     <div class="nav">
@@ -90,11 +71,12 @@ function logKey(e) {
         </ul>
       </nav>
     </div>
-    <header id="main">
+    <header id="main" tabindex="1">
 <div style="text-align:center">
-  <h2>Check out Deepti's way of solving problem</h2>
+  <h2>Check out what people have to say about Deepti</h2>
   <p>Click on the boxes below to know more</p>
 </div>
+
 
 <!-- Three columns -->
 <div class="row">
@@ -107,14 +89,11 @@ function logKey(e) {
   <div class="column" onclick="openTab('b3');" style="background:red;">
     Priya Varadarajan 
   </div>
-  <div class="column" onclick="openTab('b4');" style="background:brown;">
+  <div class="column" onclick="openTab('b4');" style="background:pink;">
     Jiyun Sim
   </div>
  
 </div>
-
-<!-- Full-width columns: (hidden by default) -->
-
 
 <div id="b1" class="containerTab" style="display:none;background:green">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -137,7 +116,7 @@ function logKey(e) {
 
   <p>A lot of the times, I personally learned a great deal from Deepti; particularly her superior organizational skills as well as productivity oriented approach to work, which lead her to find faster ways of doing her task than our legacy approach.</p>
 </div>
-<div id="b4" class="containerTab" style="display:none;background:brown">
+<div id="b4" class="containerTab" style="display:none;background:pink">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Jiyun Sim</h2>
   <img src="images/jiyun.jpg" alt="Jiyun Sim">
@@ -147,10 +126,40 @@ function logKey(e) {
  </p>
 </div>
 
+
+</header>
+
+<!-- Full-width columns: (hidden by default) -->
+
+
+
+
+
+    </div>
+
+
     <footer>
       <p>Deepti Pandey <br/>
         &copy; The portfolio </p>
     </footer>
-    </div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+var log = document.getElementById('log');
+
+document.addEventListener('keypress', logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+</script>
   </body>
 </html>
