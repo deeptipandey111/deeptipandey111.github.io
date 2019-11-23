@@ -54,10 +54,6 @@
         let query = "https://api.openweathermap.org/data/2.5/weather?APPID=3951aef2981ad1e3c6632299bb36b75f&units=" + units + "&q="+location;
 		console.log("Query is :" + query)
 
-		var testIconURL='http://openweathermap.org/img/wn/10n@2x.png';
-
-		// $('#tempImg').attr('src', testIconURL);
-  // 		$("#nasa_img").attr("src", result.hdurl);
 
         $.getJSON(query,function(result){
             console.log(JSON.stringify(result));
@@ -74,7 +70,7 @@
 				}
 				
 			}
-			var iconBaseURL="http://openweathermap.org/img/wn/";
+			var iconBaseURL="https://openweathermap.org/img/wn/";
 			if("weather" in result){
 				console.log("we got weather");
 				weatherJSON=result.weather
