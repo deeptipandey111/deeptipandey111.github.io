@@ -24,6 +24,9 @@
 </style>
 
 <script>
+	$(document).ready(function(){
+		$("#forecast").hide();
+	});
     function gettingJSON(){
     	// Use the OpenWeather API to return:
     	//  the current temperature 
@@ -56,6 +59,8 @@
 
 
         $.getJSON(query,function(result){
+        	 $("#forecast").show();
+
             console.log(JSON.stringify(result));
             $("#loc").text(location);
             if("main" in result){
